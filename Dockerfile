@@ -1,9 +1,9 @@
 FROM node:lts-alpine3.17
 
-ENV ALGO=sha256
-ENV SECRET=secret
+ENV HMAC_ALGO=sha256
+ENV HMAC_SECRET=secret
 
-
+RUN yarn install --frozen-lockfile --production
 
 EXPOSE 9000
 
